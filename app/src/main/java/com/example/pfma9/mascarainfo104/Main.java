@@ -1,6 +1,9 @@
 package com.example.pfma9.mascarainfo104;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -17,7 +20,7 @@ public class Main extends AppCompatActivity{
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
 
-    private HomeFragment homeFragment;
+    private EventosFragment eventosFragment;
     private CursosFragment cursosFragment;
     private ForoFragment foroFragment;
     private PlanFragment planFragment;
@@ -31,20 +34,20 @@ public class Main extends AppCompatActivity{
         mMainNav = findViewById(R.id.btm_nav);
         mMainFrame = findViewById(R.id.main_nav);
 
-        homeFragment = new HomeFragment();
+        eventosFragment = new EventosFragment();
         cursosFragment = new CursosFragment();
         foroFragment = new ForoFragment();
         planFragment = new PlanFragment();
         materialFragment = new MaterialFragment();
 
-        setFragment(homeFragment);
+        setFragment(eventosFragment);
 
         mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
-                    case R.id.id_Home:
-                        setFragment(homeFragment);
+                    case R.id.id_Eventos:
+                        setFragment(eventosFragment);
                         return true;
                     case R.id.id_Cursos:
                         setFragment(cursosFragment);
@@ -71,8 +74,11 @@ public class Main extends AppCompatActivity{
         fragmentTransaction.commit();
     }
 
+    @TargetApi(Build.VERSION_CODES.N)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void onClick(View v){
-        homeFragment.onClick(v);
+        eventosFragment.onClick(v);
+        cursosFragment.onClick(v);
     }
 
 }

@@ -3,24 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/id_Home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/item_home" />
+        android:id="@+id/id_Eventos"
+        android:icon="@drawable/ic_star_black_24dp"
+        android:title="@string/title_evento" />
     <item
         android:id="@+id/id_Cursos"
         android:icon="@drawable/ic_reorder_black_24dp"
-        android:title="@string/item_curso" />
+        android:title="@string/title_cursos" />
     <item
         android:id="@+id/id_Foro"
         android:icon="@drawable/ic_question_answer_black_24dp"
-        android:title="@string/item_foro" />
+        android:title="@string/title_foro" />
     <item
         android:id="@+id/id_Material"
         android:icon="@drawable/ic_library_books_black_24dp"
-        android:title="@string/item_material" />
+        android:title="@string/title_material" />
     <item
         android:id="@+id/id_Planificacion"
         android:icon="@drawable/ic_date_range_black_24dp"
-        android:title="@string/item_planificacion" />
+        android:title="@string/title_planificacion" />
 
 </menu>
